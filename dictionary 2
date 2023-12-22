@@ -1,0 +1,7 @@
+# project2
+def remove_duplicates_and_commas(text):
+    words = text.split()
+    unique_words = list(set(words))
+    filtered_words = [word for word in unique_words if word != ',']
+    filtered_text = ' '.join( filtered_words)
+    return filtered_text

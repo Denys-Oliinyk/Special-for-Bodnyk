@@ -1,0 +1,31 @@
+from tkinter import *
+
+root = Tk()
+
+def get_weather():
+    city = cityField.get()
+    print(city)
+
+root['bg'] = '#fafafa'
+root.title('Назва програми')
+root.wm_attributes('-alpha', 0.7)
+root.geometry('300x250')
+
+root.resizable(width=False, height=False)
+
+frame_top = Frame(root, bg='#ffb700', bd=5)
+frame_top.place(relx=0.15, rely=0.15, relwidth=0.7, relheight=0.25)
+
+frame_botton = Frame(root, bg='#ffb700', bd=5)
+frame_top.place(relx=0.15, rely=0.55, relwidth=0.7, relheight=0.1)
+
+cityField = Entry(frame_top, bg='brown', font=30)
+cityField.pack()
+
+btn = Button(frame_top, text='Подивтися погоду', command=get_weather)
+btn.pack()
+
+info = Label(frame_botton, text='Інформація про погоду', bg='#ffb700', font=40)
+info.pack()
+
+root.mainloop()

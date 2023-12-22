@@ -1,0 +1,18 @@
+def remove_duplicates_and_commas(sentence):
+    # Видаляємо коми з речення
+    sentence = sentence.replace(',', '')
+
+    # Розбиваємо речення на окремі слова
+    words = sentence.split()
+
+    # Видаляємо повторені слова
+    words = list(set(words))
+
+    # Повертаємо речення без ком та повторень
+    return ' '.join(words)
+
+# Приклад використання:
+input_sentence = input()
+#"Я люблю спати, вчитися, програмувати, Я люблю спати, деколи іграти"
+output_sentence = remove_duplicates_and_commas(input_sentence)
+print(output_sentence)
